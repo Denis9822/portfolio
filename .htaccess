@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.portfoliokd.com.ua$ [NC]
+RewriteRule ^(.*)$ http://portfoliokd.com.ua/$1 [R=301,L]
+
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=172800, proxy-revalidate"
+</FilesMatch>
